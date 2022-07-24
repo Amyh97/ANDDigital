@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<!---carosusel from bootstrap-->
+<div>{{ products }}</div>
+<div id="home-carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <!-- if statement here only adds active class to first element as per bootstrap documentation -->
+        {% for product in products %}
+        <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
+            <h3 class="sub-heading-middle carousel-heading">New in</h3>
+            <img src="{{product.image}}" class="d-block w-100" alt="{{product.name}}" />
+        </div>
+        {% endfor %}
+    </div>
+    <a class="carousel-control-prev" href="#my-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#my-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
+</div>
+<!--- end carousel code-->
+{% endblock %}
