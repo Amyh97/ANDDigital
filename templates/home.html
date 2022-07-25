@@ -1,25 +1,55 @@
 {% extends "base.html" %}
 {% block content %}
 <!---carosusel from bootstrap-->
-<div>{{ products }}</div>
-<div id="home-carousel" class="carousel slide" data-bs-ride="carousel">
+<div id="home-carousel" class="carousel slide carousel-fade carousel-dark" data-bs-ride="carousel">
     <div class="carousel-inner">
+        <h3 class="sub-heading-middle carousel-heading">Shop Sale</h3>
         <!-- if statement here only adds active class to first element as per bootstrap documentation -->
         {% for product in products %}
+        {% if product.sale %}
         <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
-            <h3 class="sub-heading-middle carousel-heading">New in</h3>
-            <img src="{{product.image}}" class="d-block w-100" alt="{{product.name}}" />
+            <img src="{{product.image}}" class="d-block carousel-img" alt="{{product.name}}" />
         </div>
+        {% endif %}
         {% endfor %}
     </div>
-    <a class="carousel-control-prev" href="#my-carousel" role="button" data-bs-slide="prev">
+    <a class="carousel-control-prev" href="#home-carousel" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#my-carousel" role="button" data-bs-slide="next">
+    <a class="carousel-control-next" href="#home-carousel" role="button" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </a>
+</div>
+<div class="row shop-department">
+    <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+            <img src="https://img.freepik.com/free-photo/friends-wearing-different-shoes_285396-3244.jpg?t=st=1658745231~exp=1658745831~hmac=7c39f370e863badd69bb48da659347342567ccc4fce55631f2f19e6d91f19e94&w=1060" class="card-img-top" alt="Women's shoes">
+            <div class="card-body">
+              <h5 class="card-title">Shop Women's</h5>
+              <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+            <img src="https://img.freepik.com/premium-photo/men-fashion-shoes-leather-wooden-box-shoes-store_107612-608.jpg?w=996" class="card-img-top" alt="Men's shoes">
+            <div class="card-body">
+              <h5 class="card-title">Shop Men's</h5>
+              <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+            <img src="https://img.freepik.com/free-photo/children-sat-desks-school_329181-14310.jpg?t=st=1658745434~exp=1658746034~hmac=9d232a4c2d2e4cfb5b60c911e1f2b38cd8720161ac390e6f30654bcc6698fc63&w=1060" class="card-img-top" alt="Kid's shoes">
+            <div class="card-body">
+              <h5 class="card-title">Shop Kid's</h5>
+              <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+    </div>
 </div>
 <!--- end carousel code-->
 {% endblock %}

@@ -51,7 +51,7 @@
         </header>
         <section>
             <!-- flask flash message shows when recipe is added, updated or deleted -->
-            <div class="container">
+            <div class="base-container">
                 {% with messages = get_flashed_messages() %} {% if messages %}
                 <div class="flashes">
                     {% for message in messages %}

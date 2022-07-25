@@ -14,10 +14,10 @@ if path.exists("env.py"):
 app = Flask(__name__)
 debug = True  # os.environ.get("DEBUG")
 app.config["MONGO_DBNAME"] = "GoldenShoe"
-db = MongoClient('mongodb+srv://admin:JqFLrW17ywlNBoUy@goldenshoe.0oena.mongodb.net/?retryWrites=true&w=majority')
 # MONGO_URI = os.environ.get("MONGO_URI")
-app.config["MONGO_URI"] = 'mongodb+srv://admin:JqFLrW17ywlNBoUy@goldenshoe.0oena.mongodb.net/?retryWrites=true&w=majority'
-# JqFLrW17ywlNBoUy
+MONGO_URI = ''
+app.config["MONGO_URI"] = MONGO_URI
+db = MongoClient(MONGO_URI)
 mongo = PyMongo(app)
 app.config.update(SECRET_KEY=os.urandom(24))
 
