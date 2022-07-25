@@ -31,7 +31,12 @@ header {
 
 footer {
     width: 100%;
-    margin-left: 15px;
+    padding-left: 15px;
+    background-color: #870000;
+    color: #50ba86;
+    position: absolute;
+    bottom: -40px; 
+    left: 0;
 }
 
 /*--- home.html ---*/
@@ -54,9 +59,9 @@ footer {
 }
 
 .carousel-img {
-    max-height: 300px;
-    width: 65%;
-    margin-left: 20%;
+    height: 300px;
+    width: 42%;
+    margin-left: 29%;
 }
 
 .shop-department .col-md-4 {
@@ -68,11 +73,35 @@ footer {
     max-height: 200px;
 }
 
-.card .btn {
+.gs-btn {
     background-color: #870000;
     color: #50ba86;
 }
 
+/*-- product detail page --*/
+.detail-img {
+    max-width: 100%;
+}
+
+.page-title {
+    text-align: center;
+    color: #870000;
+}
+
+.placeholder-images i {
+    font-size: 32px;
+    padding-left: 10px;
+}
+
+.offer-banner {
+    background-color: #870000;
+    color: #50ba86;
+    font-size: 42px;
+    margin-top: 40px;   
+    width: 90%;
+    padding-left: 15px;
+    text-align: center;
+}
 
 /*-- media queries --*/
 @media (max-width: 820px) {
@@ -85,4 +114,22 @@ footer {
         font-size: 24px;
         margin-left: -30px;
     }
+    
+    footer {
+        position: static;
+    }
+}
+
+@media (max-width: 420px) {
+    .offer-banner {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .carousel-img {
+        height: 227px;
+        width: 100%;
+        margin-left: 0;
+    }
+    
 }
