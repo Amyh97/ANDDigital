@@ -5,7 +5,7 @@
     <div class="carousel-inner">
         <h3 class="sub-heading-middle carousel-heading">Shop Sale</h3>
         <!-- if statement here only adds active class to first element as per bootstrap documentation -->
-        {% for product in products %}
+        {% for product in items %}
         {% if product.sale %}
         <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
             <img src="{{product.image}}" class="d-block carousel-img" alt="{{product.name}}" />
@@ -28,7 +28,7 @@
             <img src="https://img.freepik.com/free-photo/friends-wearing-different-shoes_285396-3244.jpg?t=st=1658745231~exp=1658745831~hmac=7c39f370e863badd69bb48da659347342567ccc4fce55631f2f19e6d91f19e94&w=1060" class="card-img-top" alt="Women's shoes">
             <div class="card-body">
               <h5 class="card-title">Shop Women's</h5>
-              <a href="#" class="btn">Shop Now</a>
+              <a href="{{ url_for('view_products', department='womens') }}" class="btn">Shop Now</a>
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@
             <img src="https://img.freepik.com/premium-photo/men-fashion-shoes-leather-wooden-box-shoes-store_107612-608.jpg?w=996" class="card-img-top" alt="Men's shoes">
             <div class="card-body">
               <h5 class="card-title">Shop Men's</h5>
-              <a href="#" class="btn">Shop Now</a>
+              <a href="{{ url_for('view_products', department='mens') }}" class="btn">Shop Now</a>
             </div>
         </div>
     </div>
@@ -46,7 +46,7 @@
             <img src="https://img.freepik.com/free-photo/children-sat-desks-school_329181-14310.jpg?t=st=1658745434~exp=1658746034~hmac=9d232a4c2d2e4cfb5b60c911e1f2b38cd8720161ac390e6f30654bcc6698fc63&w=1060" class="card-img-top" alt="Kid's shoes">
             <div class="card-body">
               <h5 class="card-title">Shop Kid's</h5>
-              <a href="#" class="btn">Shop Now</a>
+              <a href="{{ url_for('view_products', department='kids') }}" class="btn">Shop Now</a>
             </div>
         </div>
     </div>

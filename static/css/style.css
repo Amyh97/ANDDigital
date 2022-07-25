@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Charm&family=Sarabun:ital,wght@1,200&display=swap');
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: "Sarabun", sans-serif;
 }
 
@@ -30,8 +30,6 @@ header {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     margin-left: 15px;
 }
