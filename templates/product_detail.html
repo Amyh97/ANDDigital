@@ -10,6 +10,7 @@
                 <img src="{{ product.image }}" alt="{{ product.name }}" class="detail-img">
             </div>
             <div class="col-12 placeholder-images">
+                <!-- on full site these would be other images a user could click through -->
                 <i class="fa-solid fa-images"></i>
                 <i class="fa-solid fa-images"></i>
                 <i class="fa-solid fa-images"></i>
@@ -21,8 +22,10 @@
     <div class="col-lg-6">
         <div class="row mt-5">
             <div class="col-lg-6">
+                <!-- mx-auto bootstrap helper class to center-->
                 <table class="detail mx-auto">
                     <tbody>
+                        <!-- if statements to make pages dynamic-->
                         <tr>
                             <th>In stock:</th>
                             <td>{% if product.inStock %} Yes {% else %} No {% endif %}</td>
@@ -47,6 +50,7 @@
             </div>
         </div>
         <div class="offer-banner">
+            <!-- add insentive to each page for customers to purchace now-->
             Free Delivery on orders over £100
         </div>
     </div>
