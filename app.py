@@ -10,8 +10,7 @@ from pymongo import MongoClient
 app = Flask(__name__)
 debug = 'DEVELOPMENT' in os.environ
 app.config["MONGO_DBNAME"] = "GoldenShoe"
-# MONGO_URI = os.environ.get("MONGO_URI")
-MONGO_URI = 'mongodb+srv://admin:JqFLrW17ywlNBoUy@goldenshoe.0oena.mongodb.net/?retryWrites=true&w=majority'
+MONGO_URI = os.environ.get("MONGO_URI")
 app.config["MONGO_URI"] = MONGO_URI
 db = MongoClient(MONGO_URI)
 mongo = PyMongo(app)
